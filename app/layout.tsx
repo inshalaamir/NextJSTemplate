@@ -1,5 +1,9 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import NextAuthSessionProvider from './providers/sessionProvider'
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
+import { GlobalContextProvider } from './context/store'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +19,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NextAuthSessionProvider>
+          <GlobalContextProvider>
+          <main className='bg-gray-100 '>
+            <Sidebar>
+              <Header/>
+              {children}
+            </Sidebar>
+          </main>
+          </GlobalContextProvider>
+        </NextAuthSessionProvider>
+      </body>
     </html>
   )
 }

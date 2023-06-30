@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ({filterFunc}: any) {
+export default function FilterBar({filterFunc}: any) {
 
     const [category, setCategory] = useState("All")
     const [brand, setBrand] = useState("All")
@@ -42,7 +42,7 @@ export default function ({filterFunc}: any) {
                 <option value="Royal_Mirage">Royal Mirage</option>
                 <option value="Fog Scent Xpressio">Fog Scent Xpressio</option>
                 <option value="Al Munakh">Al Munakh</option>
-                <option value="L'Oreal Paris">L'Oreal Paris</option>
+                <option value="L&apos;Oreal Paris">L&apos;Oreal Paris</option>
                 <option value="Hemani Tea">Hemani Tea</option>
                 <option value="Dermive">Dermive</option>
                 <option value="Saaf & Khaas">Saaf & Khaas</option>

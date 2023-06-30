@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Cards from "../components/Cards"
 
-export default function page() {
+export default function Page() {
 
   const { data:session, status } = useSession({
     required: true,

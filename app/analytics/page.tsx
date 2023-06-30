@@ -8,7 +8,7 @@ import Barchart from '@/components/Barchart';
 import Table from '@/components/Table';
 import { useSession } from 'next-auth/react';
 
-export default function analytics() {
+export default function Analytics() {
 
     const { data:session, status } = useSession({
         required: true,

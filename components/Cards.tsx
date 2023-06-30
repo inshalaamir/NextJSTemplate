@@ -18,7 +18,7 @@ const Cards = ({products}:any) => {
         <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-4 p-4'>
 
             {products?.map((product:any) => 
-                <Card openModal={openModal} product={product}/>
+                <Card key={product.id} openModal={openModal} product={product}/>
             )}
 
             <Modal open={isOpen} onClose={()=> setIsOpen(false)} data={modalData}/>

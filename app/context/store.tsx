@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 interface ContextProps{
     page: string,
-    setPage: Dispatch<SetStateAction<String>>
+    setPage: Dispatch<SetStateAction<string>>
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -13,7 +13,7 @@ const GlobalContext = createContext<ContextProps>({
     setPage: (): string => ''
 })
 
-export const GlobalContextProvider = ({children}) => {
+export const GlobalContextProvider = ({children}:any) => {
     
     const [page, setPage] = useState('Dashboard')
     return(

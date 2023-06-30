@@ -20,7 +20,7 @@ export default function Table({data}:any) {
                 {
                 data?.products.map((product:any)=>{
                     return(
-                    <tr>
+                    <tr key={product.id}>
                         <td className='p-3 md:text-sm text-xs text-gray-700'>{product.title}</td>
                         <td className='p-3 md:text-sm text-xs text-gray-700'>{product.description}</td>
                         <td className='p-3 md:text-sm text-xs text-gray-700'>{product.price}</td>
